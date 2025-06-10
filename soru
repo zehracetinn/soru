@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gay misin?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #question {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    .btn {
+      padding: 20px 40px;
+      font-size: 20px;
+      margin: 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+    }
+    #yes {
+      background-color: #4caf50;
+      color: white;
+    }
+    #no {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+    #result {
+      font-size: 28px;
+      margin-top: 50px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="question">Gay misin?</div>
+  <button class="btn" id="yes">Evet</button>
+  <button class="btn" id="no">Hayır</button>
+  <div id="result"></div>
+
+  <script>
+    const yesBtn = document.getElementById("yes");
+    const noBtn = document.getElementById("no");
+    const result = document.getElementById("result");
+
+    yesBtn.addEventListener("click", () => {
+      result.innerText = "Hehehe, tamam kabul ettin artık! 🌈😄";
+    });
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 50));
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+  </script>
+</body>
+</html>
